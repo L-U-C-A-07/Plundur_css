@@ -1,0 +1,32 @@
+#chatInputHolder {
+    display: flex;
+    margin-top: 0px;
+    border-radius: 0px 0px 20px 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+#chatInput {
+    color: black !important;
+    background-color: #b9b9b9d6;
+    border-radius: 20px;
+    width: 100%
+}
+#uiBase.onGame #voiceDisplay {
+    display: none;
+}
+#chatList {
+    border-radius: 20px 20px 0px 0px;
+}
+#chatSwitch:after {
+    display: none;
+}
+.chatMsg {
+    font-family: montserrant;
+    font-size: 23px;
+    color: #bebebe !important;
+}
+.leaderCounter, .leaderNameM, .leaderScore  {
+    font-size: 30px;
+    color: #a5a5a5;
+    font-family: montserrat !important;
+}
