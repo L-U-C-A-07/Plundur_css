@@ -26,9 +26,6 @@
 #chatList {
     border-radius: 20px 20px 0px 0px;
 }
-#chatSwitch:after {
-    display: none;
-}
 .chatMsg {
     font-family: montserrant;
     font-size: 23px;
@@ -38,4 +35,31 @@
     font-size: 30px;
     color: #a5a5a5;
     font-family: montserrat !important;
+}
+#topLeftHolder, #weapDisplay, #chatSwitch:after, #perkHolder, #bottomRight, .topRightCounters, #igXPBar, #hudClassIcon {
+    display: none !important;
+}
+#bottomLeftHolder {
+     top: 30px;
+}
+.healthBarSeg {
+     margin-right: -4px;
+     border-radius: 0px !important;
+}
+.hpBSeg {
+     border-radius: 0px;
+     box-shadow: none;
+     -webkit-box-shadow: none;
+}
+#uiBase.onGame #chatHolder {
+    bottom: 20px;
+}
+#healthValueHolder {
+     position: relative;
+     left: 50px;
+     top: 55px;
+     background-color: transparent;
+}
+#healthValue, #maxHP {
+     color: black;
 }
