@@ -224,12 +224,15 @@ Image
   display: none !important;
 }
 
-#menuItemContainer > .menuItem:nth-child(2),
 #menuItemContainer > .menuItem:nth-child(3),
 #menuItemContainer > .menuItem:nth-child(5),
 #menuItemContainer > .menuItem:nth-child(6),
 .menuItem > span {
   display: none !important;
+}
+
+.menuItem:nth-child(2) {
+  
 }
 
 /* Main menu background */
@@ -270,7 +273,7 @@ Image
 }
 
 #menuItemContainer {
-  width: 45.5rem;
+  width: calc(200px * 4 + 2rem * 3);
   height: 4.2rem;
   margin-bottom: 10rem;
   border-radius: 10px;
@@ -281,7 +284,7 @@ Image
   transform: translateX(-50%);
   background: transparent;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 200px);
 }
 
 #clientExit {
@@ -327,6 +330,11 @@ Image
   grid-column: 3;
 }
 
+.menuItem:nth-child(2) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
 .menuItemTitle {
   display: none !important;
 }
@@ -352,6 +360,13 @@ Image
 }
 .menuItem:nth-child(1)::after {
   content: "Profile";
+}
+
+.menuItem:nth-child(2)::before {
+  content: CSSIMAGE:Market;
+}
+.menuItem:nth-child(2)::after {
+  content: "Shop";
 }
 
 .menuItem:nth-child(4)::before {
@@ -687,7 +702,7 @@ Image
     background-image: CSSIMAGE:adBlockImg;
 }
 
-.menuLink, .statTabB0, .xpBar,.setHed, #profilePicM, .setBodH, .settingsHeader, .bigMenTabs, #settHolder {
+#referralHeader, .accountInput, .buttonP, .buttonG, .reqW.login, #shopHeader, #shopSideSellB, #shopBundlB, #shopPremBen, #shopPremBar, #shopMainSellB, .menuLink, .statTabB0, .xpBar,.setHed, #profilePicM, .setBodH, .settingsHeader, .bigMenTabs, #settHolder {
     display: none !important;
 }
 
@@ -706,4 +721,5 @@ Image
     font-family: sans-serif;
     content: "COMING SOON";
     color: white;
+    position: absolute;
 }
