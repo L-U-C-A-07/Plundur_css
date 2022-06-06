@@ -1,3 +1,7 @@
+.iconProfile { 
+	background-image: CSSIMAGE:profile; 
+}
+
 /*
   _____  _     _    _ _   _ _____  _    _ _____  
  |  __ \| |   | |  | | \ | |  __ \| |  | |  __ \ 
@@ -36,7 +40,7 @@
     color: #a5a5a5;
     font-family: montserrat !important;
 }
-#topLeftHolder, #weapDisplay, #chatSwitch:after, #perkHolder, #bottomRight, .topRightCounters, #igXPBar, #hudClassIcon {
+#topLeftHolder, #weapDisplay, #chatSwitch:after, #perkHolder, #bottomRight, .topRightCounters, #igXPBar, #hudClassIcon, #newsHolder, .headerBarRight, #infoHider, #signedOutHeaderBar {
     display: none !important;
 }
 #bottomLeftHolder {
@@ -64,8 +68,115 @@
      color: black;
 }
 @font-face {
-  font-family: gamefont;
-  src: url("../fonts/Algerian.ttf");
+	font-family: 'GameFont';
+	src: CSSFONT:font2;
+}
+
+@keyframes grow {
+  from {
+    opacity: 0.3;
+  }
+}
+
+:root {
+  --bg: #ffffff0d;
+  --btn-shadow: #b8b6b6;
+  --btn-background: #f7f5f5;
+}
+
+* {
+  letter-spacing: 3px;
+}
+
+#newsHolder,
+.youNewDiv,
+/* #aHolder, */
+#headerRight,
+#mapInfoHolder,
+#braveWarning {
+  display: none !important;
+}
+
+#signedInHeaderBar,
+... (476 lines left)
+Collapse
+sample.css
+11 KB
+Slick — Today at 3:31 PM
+Image
+﻿
+.iconProfile { 
+	background-image: CSSIMAGE:profile; 
+}
+
+/*
+  _____  _     _    _ _   _ _____  _    _ _____  
+ |  __ \| |   | |  | | \ | |  __ \| |  | |  __ \ 
+ | |__) | |   | |  | |  \| | |  | | |  | | |__) |
+ |  ___/| |   | |  | | . ` | |  | | |  | |  _  / 
+ | |    | |___| |__| | |\  | |__| | |__| | | \ \ 
+ |_|    |______\____/|_| \_|_____/ \____/|_|  \_\
+
+*/
+#chatInputHolder {
+    display: flex;
+    margin-top: 0px;
+    border-radius: 0px 0px 20px 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+#chatInput {
+    color: black !important;
+    background-color: #b9b9b9d6;
+    border-radius: 20px;
+    width: 100%
+}
+#uiBase.onGame #voiceDisplay {
+    display: none;
+}
+#chatList {
+    border-radius: 20px 20px 0px 0px;
+}
+.chatMsg {
+    font-family: montserrant;
+    font-size: 23px;
+    color: #bebebe !important;
+}
+.leaderCounter, .leaderNameM, .leaderScore  {
+    font-size: 30px;
+    color: #a5a5a5;
+    font-family: montserrat !important;
+}
+#topLeftHolder, #weapDisplay, #chatSwitch:after, #perkHolder, #bottomRight, .topRightCounters, #igXPBar, #hudClassIcon, #newsHolder, .headerBarRight, #infoHider, #signedOutHeaderBar {
+    display: none !important;
+}
+#bottomLeftHolder {
+     top: 30px;
+}
+.healthBarSeg {
+     margin-right: -4px;
+     border-radius: 0px !important;
+}
+.hpBSeg {
+     border-radius: 0px;
+     box-shadow: none;
+     -webkit-box-shadow: none;
+}
+#uiBase.onGame #chatHolder {
+    bottom: 20px;
+}
+#healthValueHolder {
+     position: relative;
+     left: 50px;
+     top: 55px;
+     background-color: transparent;
+}
+#healthValue, #maxHP {
+     color: black;
+}
+@font-face {
+	font-family: 'GameFont';
+	src: CSSFONT:font2;
 }
 
 @keyframes grow {
@@ -123,13 +234,13 @@
 
 /* Main menu background */
 #instructionHolder::after {
-  content: "";
+  content: CSSIMAGE:MainBgPlaceholder;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  width: 1vw;
+  height: 1vh;
+  translate: (-50%, -50%);
   left: 0;
   right: 0;
-  background-image: url("https://thumbs.gfycat.com/SeparateSameAmurratsnake-size_restricted.gif");
   background-position: center;
   background-size: cover;
 }
@@ -139,7 +250,7 @@
 }
 
 #instructions::before {
-  content: url(../img/play.svg);
+  content: CSSIMAGE:Play;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -222,7 +333,7 @@
 
 /* #signedOutHeaderBar > div::after, */
 .menuItem::before {
-  /* content: url(../img/profile.svg); */
+  /* content: CSSIMAGE:; */
   position: relative;
   width: 3.4rem;
   height: 37px;
@@ -237,21 +348,21 @@
 }
 
 .menuItem:nth-child(1)::before {
-  content: url(../img/profile.svg);
+  content: CSSIMAGE:Profile;
 }
 .menuItem:nth-child(1)::after {
   content: "Profile";
 }
 
 .menuItem:nth-child(4)::before {
-  content: url(../img/market.svg);
+  content: CSSIMAGE:Market;
 }
 .menuItem:nth-child(4)::after {
   content: "Market";
 }
 
 .menuItem:nth-child(7)::before {
-  content: url(../img/settings.svg);
+  content: CSSIMAGE:Settings;
 }
 .menuItem:nth-child(7)::after {
   content: "Settings";
@@ -285,7 +396,7 @@
 }
 
 #signedOutHeaderBar > div::before {
-  content: url(../img/login.svg);
+  content: CSSIMAGE:login;
   position: relative;
   width: 1.4rem;
   height: 37px;
@@ -301,7 +412,7 @@
 }
 
 #mainLogo {
-  content: url("../img/header.png");
+  content: CSSIMAGE:Header;
   margin-top: 69px !important;
   height: 151px !important;
 }
@@ -394,7 +505,7 @@
 }
 
 .buttonPI::before {
-  content: url(../img/invite.svg);
+  content: CSSIMAGE:invite;
   position: relative;
   width: 2.4rem;
   height: 37px;
@@ -411,7 +522,7 @@
 }
 
 .buttonPI:last-child::before {
-  content: url(../img/join.svg);
+  content: CSSIMAGE:Join;
 }
 
 .buttonPI:last-child::after {
@@ -465,6 +576,7 @@
   font-size: 82px;
   color: #f8d047;
   margin-top: -11rem;
+  text-shadow: 0 0 20px #00000078;
 }
 
 #initLoader > div:first-child {
@@ -513,17 +625,29 @@
 }
 
 #loadTipsHolder {
-  font-size: 26px;
+  font-size: 0px;
   width: 39rem;
   bottom: unset;
   top: 50%;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   line-height: 3rem;
+}
+
+#loadTipsHolder::after {
+  position: absolute;
+  content: "Krunker is a free online platform to create and play games";
+  font-size: 27px;
+  width: 40rem;
+  top: 50%;
+  left: 50%;
+  color: #e7db9a;
+  text-shadow: 0 0 8px black;
+  transform: translate(-50%, -50%);
 }
 
 #initLoader::after {
   position: absolute;
-  content: url(../img/logo_5.png);
+  content: CSSIMAGE:logo_5;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -538,10 +662,42 @@
   left: 0;
   right: 0;
   object-fit: cover;
-  background-image: url(https://i.pinimg.com/originals/14/33/72/143372c494d35952f35fcc7d78b2a809.jpg);
+  background-image: CSSIMAGE:loading_bg;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 100%;
+}
+
+
+#victorySub[src*="def"] {
+  content: CSSIMAGE:def;
+}
+
+#victorySub[src*="vic"] {
+  content: CSSIMAGE:vic;
+}
+
+#victorySub[src*="dra"] {
+  content: CSSIMAGE:dra;
+}
+
+.menuItem:nth-child(4), .menuItem:nth-child(1) {
+    display: none !important;
+}
+.menuItem:nth-child(7)::after {
+    content: "Adjust Game Settings" !important;
+}
+
+#menuItemContainer {
+    display: flex;
+}
+
+#inviteButton {
+    display: none;
+}
+
+#supportKrunker {
+    background-image: CSSIMAGE:adBlockImg;
 }
