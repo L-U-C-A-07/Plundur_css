@@ -683,21 +683,27 @@ Image
   content: CSSIMAGE:dra;
 }
 
-.menuItem:nth-child(4), .menuItem:nth-child(1) {
-    display: none !important;
-}
-.menuItem:nth-child(7)::after {
-    content: "Adjust Game Settings" !important;
-}
-
-#menuItemContainer {
-    display: flex;
-}
-
-#inviteButton {
-    display: none;
-}
-
 #supportKrunker {
     background-image: CSSIMAGE:adBlockImg;
+}
+
+.menuLink, .statTabB0, .xpBar,.setHed, #profilePicM, .setBodH, .settingsHeader, .bigMenTabs, #settHolder {
+    display: none !important;
+}
+
+#menuWindow {
+    height: 400px;
+    width: 600px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px !important;
+}
+
+#menuWindow::before {
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    content: "COMING SOON";
+    color: white;
 }
