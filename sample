@@ -735,3 +735,7 @@ Image
 #instructionsUpdate {
     padding-bottom: 15px !important;
 }
+
+#onetrust-banner-sdk, .onetrust-pc-dark-filter {
+    display: none !important;
+}
