@@ -36,7 +36,7 @@
     color: #a5a5a5;
     font-family: montserrat !important;
 }
-#topLeftHolder, .instructionsTabs, #weapDisplay, #chatSwitch:after, #perkHolder, #bottomRight, .topRightCounters, #igXPBar, #hudClassIcon, #newsHolder, .headerBarRight, #infoHider, #signedOutHeaderBar {
+#topLeftHolder, #popupBack, #popupHolder, #popupContent, #claimPop, #bundlePop, #popupBack, .instructionsTabs, #weapDisplay, #chatSwitch:after, #perkHolder, #bottomRight, .topRightCounters, #igXPBar, #hudClassIcon, #newsHolder, .headerBarRight, #infoHider, #signedOutHeaderBar {
     display: none !important;
 }
 #bottomLeftHolder {
